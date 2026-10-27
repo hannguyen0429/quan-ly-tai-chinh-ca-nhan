@@ -1,0 +1,47 @@
+:root {
+  --ink: #1b1712;
+  --muted: #6b6258;
+  --paper: #f3eee4;
+  --paper-2: #fffaf2;
+  --line: #ddd2c3;
+  --pine: #1f4d3a;
+  --pine-2: #2f6b50;
+  --clay: #9a3b22;
+  --good: #1d6b45;
+  --sans: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
+  --serif: 'Fraunces', ui-serif, Georgia, serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 500px at 50% -10%, #e7d7b8 0%, transparent 55%),
+    var(--paper);
+}
+
+h1,
+h2,
+p,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
