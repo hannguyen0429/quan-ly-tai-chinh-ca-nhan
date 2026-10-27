@@ -10,7 +10,7 @@ import {
 import { estimateLiving } from '../lib/livingEstimate'
 import { formatVnd } from '../lib/money'
 
-const STORAGE_KEY = 'tlch-household-profile'
+const STORAGE_KEY = 'tlch-v2-household-profile'
 
 function newDependent(): Dependent {
   return {

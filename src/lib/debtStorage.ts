@@ -1,18 +1,17 @@
-import { demoSnapshot } from '../data/demo'
 import type { Debt } from '../types'
 import { normalizeDebt } from './debt'
 
-const STORAGE_KEY = 'tlch-debts'
+const STORAGE_KEY = 'tlch-v2-debts'
 
 export function loadDebts(): Debt[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return demoSnapshot.debts.map(normalizeDebt)
+    if (!raw) return []
     const parsed = JSON.parse(raw) as Debt[]
-    if (!Array.isArray(parsed)) return demoSnapshot.debts.map(normalizeDebt)
+    if (!Array.isArray(parsed)) return []
     return parsed.map(normalizeDebt)
   } catch {
-    return demoSnapshot.debts.map(normalizeDebt)
+    return []
   }
 }
 
